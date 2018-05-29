@@ -34,8 +34,11 @@ public class position_offer implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Is published")
 	private java.lang.Boolean published;
 
-	@org.kie.api.definition.type.Label(value = "Still actual")
+	@org.kie.api.definition.type.Label("Still actual")
 	private java.lang.Boolean actual;
+
+	@org.kie.api.definition.type.Label(value = "Number of free position slots")
+	private java.lang.Integer count;
 
 	public position_offer() {
 	}
@@ -105,11 +108,19 @@ public class position_offer implements java.io.Serializable {
 		this.actual = actual;
 	}
 
+	public java.lang.Integer getCount() {
+		return this.count;
+	}
+
+	public void setCount(java.lang.Integer count) {
+		this.count = count;
+	}
+
 	public position_offer(java.lang.Long id, java.lang.String name,
 			sk.cz.muni.brewery.positionConditions positionConditions,
 			java.lang.Integer salary, sk.cz.muni.brewery.positionType type,
 			java.lang.String description, java.lang.Boolean published,
-			java.lang.Boolean actual) {
+			java.lang.Boolean actual, java.lang.Integer count) {
 		this.id = id;
 		this.name = name;
 		this.positionConditions = positionConditions;
@@ -118,6 +129,7 @@ public class position_offer implements java.io.Serializable {
 		this.description = description;
 		this.published = published;
 		this.actual = actual;
+		this.count = count;
 	}
 
 }
