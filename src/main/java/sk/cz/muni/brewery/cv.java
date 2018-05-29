@@ -15,29 +15,33 @@ public class cv implements java.io.Serializable {
 	private java.lang.Long id;
 
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
-	@org.kie.api.definition.type.Label(value = "Work history")
+	@org.kie.api.definition.type.Label("Work history")
 	private sk.cz.muni.brewery.positionConditions conditions;
 
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
 
-	@org.kie.api.definition.type.Label(value = "Surname")
+	@org.kie.api.definition.type.Label("Surname")
 	private java.lang.String surname;
 
-	@org.kie.api.definition.type.Label(value = "Telephone number")
+	@org.kie.api.definition.type.Label("Telephone number")
 	private java.lang.String tel;
 
-	@org.kie.api.definition.type.Label(value = "Mail adress")
+	@org.kie.api.definition.type.Label("Mail adress")
 	private java.lang.String mail;
 
-	@org.kie.api.definition.type.Label(value = "Age")
+	@org.kie.api.definition.type.Label("Age")
 	private java.lang.Integer age;
 
-	@org.kie.api.definition.type.Label(value = "Work history")
+	@org.kie.api.definition.type.Label("Work history")
 	private java.lang.String previousJob;
 
-	@org.kie.api.definition.type.Label(value = "Why do you want to work for us")
+	@org.kie.api.definition.type.Label("Why do you want to work for us")
 	private java.lang.String reason;
+
+	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	@org.kie.api.definition.type.Label(value = "What position do you access")
+	private sk.cz.muni.brewery.position_offer targetposition;
 
 	public cv() {
 	}
@@ -114,11 +118,21 @@ public class cv implements java.io.Serializable {
 		this.reason = reason;
 	}
 
+	public sk.cz.muni.brewery.position_offer getTargetposition() {
+		return this.targetposition;
+	}
+
+	public void setTargetposition(
+			sk.cz.muni.brewery.position_offer targetposition) {
+		this.targetposition = targetposition;
+	}
+
 	public cv(java.lang.Long id,
 			sk.cz.muni.brewery.positionConditions conditions,
 			java.lang.String name, java.lang.String surname,
 			java.lang.String tel, java.lang.String mail, java.lang.Integer age,
-			java.lang.String previousJob, java.lang.String reason) {
+			java.lang.String previousJob, java.lang.String reason,
+			sk.cz.muni.brewery.position_offer targetposition) {
 		this.id = id;
 		this.conditions = conditions;
 		this.name = name;
@@ -128,6 +142,7 @@ public class cv implements java.io.Serializable {
 		this.age = age;
 		this.previousJob = previousJob;
 		this.reason = reason;
+		this.targetposition = targetposition;
 	}
 
 }
