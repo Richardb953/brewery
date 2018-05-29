@@ -7,29 +7,77 @@ package sk.cz.muni.brewery;
 @javax.persistence.Entity
 public class positionConditions implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "POSITIONCONDITIONS_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "POSITIONCONDITIONS_ID_GENERATOR", sequenceName = "POSITIONCONDITIONS_ID_SEQ")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "POSITIONCONDITIONS_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(name = "POSITIONCONDITIONS_ID_GENERATOR", sequenceName = "POSITIONCONDITIONS_ID_SEQ")
+	private java.lang.Long id;
 
-    public positionConditions() {
-    }
-    
-    public positionConditions(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Years worked in department")
+	private java.lang.Integer worked;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	@org.kie.api.definition.type.Label(value = "Complete education")
+	private sk.cz.muni.brewery.education education;
 
+	@org.kie.api.definition.type.Label(value = "Criminal record")
+	private java.lang.Boolean crimrec;
 
+	@org.kie.api.definition.type.Label(value = "English speaker")
+	private java.lang.Boolean english;
 
+	public positionConditions() {
+	}
+
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.Integer getWorked() {
+		return this.worked;
+	}
+
+	public void setWorked(java.lang.Integer worked) {
+		this.worked = worked;
+	}
+
+	public sk.cz.muni.brewery.education getEducation() {
+		return this.education;
+	}
+
+	public void setEducation(sk.cz.muni.brewery.education education) {
+		this.education = education;
+	}
+
+	public java.lang.Boolean getCrimrec() {
+		return this.crimrec;
+	}
+
+	public void setCrimrec(java.lang.Boolean crimrec) {
+		this.crimrec = crimrec;
+	}
+
+	public java.lang.Boolean getEnglish() {
+		return this.english;
+	}
+
+	public void setEnglish(java.lang.Boolean english) {
+		this.english = english;
+	}
+
+	public positionConditions(java.lang.Long id, java.lang.Integer worked,
+			sk.cz.muni.brewery.education education, java.lang.Boolean crimrec,
+			java.lang.Boolean english) {
+		this.id = id;
+		this.worked = worked;
+		this.education = education;
+		this.crimrec = crimrec;
+		this.english = english;
+	}
 
 }
