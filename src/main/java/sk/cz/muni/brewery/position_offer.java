@@ -14,25 +14,28 @@ public class position_offer implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(name = "POSITION_OFFER_ID_GENERATOR", sequenceName = "POSITION_OFFER_ID_SEQ")
 	private java.lang.Long id;
 
-	@org.kie.api.definition.type.Label(value = "Position name")
+	@org.kie.api.definition.type.Label("Position name")
 	private java.lang.String name;
 
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
-	@org.kie.api.definition.type.Label(value = "Position conditions")
+	@org.kie.api.definition.type.Label("Position conditions")
 	private sk.cz.muni.brewery.positionConditions positionConditions;
 
-	@org.kie.api.definition.type.Label(value = "Salary (eur)")
+	@org.kie.api.definition.type.Label("Salary (eur)")
 	private java.lang.Integer salary;
 
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
-	@org.kie.api.definition.type.Label(value = "Recommended position type")
+	@org.kie.api.definition.type.Label("Recommended position type")
 	private sk.cz.muni.brewery.positionType type;
 
-	@org.kie.api.definition.type.Label(value = "Position basic description")
+	@org.kie.api.definition.type.Label("Position basic description")
 	private java.lang.String description;
 
-	@org.kie.api.definition.type.Label(value = "Is published")
+	@org.kie.api.definition.type.Label("Is published")
 	private java.lang.Boolean published;
+
+	@org.kie.api.definition.type.Label(value = "Still actual")
+	private java.lang.Boolean actual;
 
 	public position_offer() {
 	}
@@ -94,10 +97,19 @@ public class position_offer implements java.io.Serializable {
 		this.published = published;
 	}
 
+	public java.lang.Boolean getActual() {
+		return this.actual;
+	}
+
+	public void setActual(java.lang.Boolean actual) {
+		this.actual = actual;
+	}
+
 	public position_offer(java.lang.Long id, java.lang.String name,
 			sk.cz.muni.brewery.positionConditions positionConditions,
 			java.lang.Integer salary, sk.cz.muni.brewery.positionType type,
-			java.lang.String description, java.lang.Boolean published) {
+			java.lang.String description, java.lang.Boolean published,
+			java.lang.Boolean actual) {
 		this.id = id;
 		this.name = name;
 		this.positionConditions = positionConditions;
@@ -105,6 +117,7 @@ public class position_offer implements java.io.Serializable {
 		this.type = type;
 		this.description = description;
 		this.published = published;
+		this.actual = actual;
 	}
 
 }
