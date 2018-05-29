@@ -8,6 +8,7 @@
         <class>sk.cz.muni.brewery.positionConditions</class>
         <class>sk.cz.muni.brewery.education</class>
         <class>sk.cz.muni.brewery.cv</class>
+        <class>sk.cz.muni.brewery.worker</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
