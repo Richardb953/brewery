@@ -7,29 +7,104 @@ package sk.cz.muni.brewery;
 @javax.persistence.Entity
 public class position_offer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "POSITION_OFFER_ID_GENERATOR")
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "POSITION_OFFER_ID_GENERATOR", sequenceName = "POSITION_OFFER_ID_SEQ")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "POSITION_OFFER_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(name = "POSITION_OFFER_ID_GENERATOR", sequenceName = "POSITION_OFFER_ID_SEQ")
+	private java.lang.Long id;
 
-    public position_offer() {
-    }
-    
-    public position_offer(java.lang.Long id) {
-        this.id = id;
-    }
+	@org.kie.api.definition.type.Label(value = "Position name")
+	private java.lang.String name;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	@org.kie.api.definition.type.Label(value = "Position conditions")
+	private sk.cz.muni.brewery.positionConditions positionConditions;
 
+	@org.kie.api.definition.type.Label(value = "Salary (eur)")
+	private java.lang.Integer salary;
 
+	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
+	@org.kie.api.definition.type.Label(value = "Recommended position type")
+	private sk.cz.muni.brewery.positionType type;
 
+	@org.kie.api.definition.type.Label(value = "Position basic description")
+	private java.lang.String description;
+
+	@org.kie.api.definition.type.Label(value = "Is published")
+	private java.lang.Boolean published;
+
+	public position_offer() {
+	}
+
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public sk.cz.muni.brewery.positionConditions getPositionConditions() {
+		return this.positionConditions;
+	}
+
+	public void setPositionConditions(
+			sk.cz.muni.brewery.positionConditions positionConditions) {
+		this.positionConditions = positionConditions;
+	}
+
+	public java.lang.Integer getSalary() {
+		return this.salary;
+	}
+
+	public void setSalary(java.lang.Integer salary) {
+		this.salary = salary;
+	}
+
+	public sk.cz.muni.brewery.positionType getType() {
+		return this.type;
+	}
+
+	public void setType(sk.cz.muni.brewery.positionType type) {
+		this.type = type;
+	}
+
+	public java.lang.String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(java.lang.String description) {
+		this.description = description;
+	}
+
+	public java.lang.Boolean getPublished() {
+		return this.published;
+	}
+
+	public void setPublished(java.lang.Boolean published) {
+		this.published = published;
+	}
+
+	public position_offer(java.lang.Long id, java.lang.String name,
+			sk.cz.muni.brewery.positionConditions positionConditions,
+			java.lang.Integer salary, sk.cz.muni.brewery.positionType type,
+			java.lang.String description, java.lang.Boolean published) {
+		this.id = id;
+		this.name = name;
+		this.positionConditions = positionConditions;
+		this.salary = salary;
+		this.type = type;
+		this.description = description;
+		this.published = published;
+	}
 
 }
