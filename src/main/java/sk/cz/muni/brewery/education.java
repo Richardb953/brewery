@@ -14,8 +14,11 @@ public class education implements java.io.Serializable {
 	@javax.persistence.SequenceGenerator(name = "EDUCATION_ID_GENERATOR", sequenceName = "EDUCATION_ID_SEQ")
 	private java.lang.Long id;
 
-	@org.kie.api.definition.type.Label(value = "Completed education")
+	@org.kie.api.definition.type.Label("Completed education")
 	private java.lang.String name;
+
+	@org.kie.api.definition.type.Label(value = "Education level")
+	private java.lang.Integer level;
 
 	public education() {
 	}
@@ -36,9 +39,19 @@ public class education implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public education(java.lang.Long id, java.lang.String name) {
+	public java.lang.Integer getLevel() {
+		return this.level;
+	}
+
+	public void setLevel(java.lang.Integer level) {
+		this.level = level;
+	}
+
+	public education(java.lang.Long id, java.lang.String name,
+			java.lang.Integer level) {
 		this.id = id;
 		this.name = name;
+		this.level = level;
 	}
 
 }
