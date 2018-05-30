@@ -1,0 +1,1 @@
+{"id":"43af9427-9fc6-4a6a-a8f4-2e6ec4477fbd","name":"Createnewposition-taskform","model":{"taskName":"Createnewposition","processId":"src.Recruitment","name":"task","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
