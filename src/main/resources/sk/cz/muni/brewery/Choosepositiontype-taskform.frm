@@ -1,0 +1,1 @@
+{"id":"8dd5d6f0-0c10-4ba3-aa8f-7235b3730f9d","name":"Choosepositiontype-taskform","model":{"taskName":"Choosepositiontype","processId":"src.Recruitment","name":"task","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
