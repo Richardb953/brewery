@@ -1,0 +1,1 @@
+{"id":"351328be-3b15-4633-a5db-fb0c9fed9e1f","name":"Searchpositionoffer-taskform","model":{"taskName":"Searchpositionoffer","processId":"src.newcv","name":"task","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
