@@ -41,7 +41,7 @@ public class cv implements java.io.Serializable {
 
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	@org.kie.api.definition.type.Label("What position do you access")
-	private sk.cz.muni.brewery.position_offer targetposition;
+	private sk.cz.muni.brewery.positionOffer targetposition;
 
 	@org.kie.api.definition.type.Label(value = "Successfull")
 	private java.lang.Boolean scuccess;
@@ -121,12 +121,12 @@ public class cv implements java.io.Serializable {
 		this.reason = reason;
 	}
 
-	public sk.cz.muni.brewery.position_offer getTargetposition() {
+	public sk.cz.muni.brewery.positionOffer getTargetposition() {
 		return this.targetposition;
 	}
 
 	public void setTargetposition(
-			sk.cz.muni.brewery.position_offer targetposition) {
+			sk.cz.muni.brewery.positionOffer targetposition) {
 		this.targetposition = targetposition;
 	}
 
@@ -143,7 +143,7 @@ public class cv implements java.io.Serializable {
 			java.lang.String name, java.lang.String surname,
 			java.lang.String tel, java.lang.String mail, java.lang.Integer age,
 			java.lang.String previousJob, java.lang.String reason,
-			sk.cz.muni.brewery.position_offer targetposition,
+			sk.cz.muni.brewery.positionOffer targetposition,
 			java.lang.Boolean scuccess) {
 		this.id = id;
 		this.conditions = conditions;
