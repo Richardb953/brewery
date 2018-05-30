@@ -5,7 +5,7 @@ package sk.cz.muni.brewery;
  */
 
 @javax.persistence.Entity
-public class position_offer implements java.io.Serializable {
+public class positionoffer implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
@@ -37,10 +37,10 @@ public class position_offer implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Still actual")
 	private java.lang.Boolean actual;
 
-	@org.kie.api.definition.type.Label(value = "Number of free position slots")
+	@org.kie.api.definition.type.Label("Number of free position slots")
 	private java.lang.Integer count;
 
-	public position_offer() {
+	public positionoffer() {
 	}
 
 	public java.lang.Long getId() {
@@ -116,7 +116,7 @@ public class position_offer implements java.io.Serializable {
 		this.count = count;
 	}
 
-	public position_offer(java.lang.Long id, java.lang.String name,
+	public positionoffer(java.lang.Long id, java.lang.String name,
 			sk.cz.muni.brewery.positionConditions positionConditions,
 			java.lang.Integer salary, sk.cz.muni.brewery.positionType type,
 			java.lang.String description, java.lang.Boolean published,
