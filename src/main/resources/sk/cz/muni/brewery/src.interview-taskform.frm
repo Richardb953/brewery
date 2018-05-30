@@ -1,0 +1,1 @@
+{"id":"dee35031-bf3a-4f4c-9058-547490f6cdac","name":"src.interview-taskform.frm","model":{"processName":"Recruitment","processId":"src.interview","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.process.BusinessProcessFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
