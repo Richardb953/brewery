@@ -44,7 +44,7 @@ public class cv implements java.io.Serializable {
 	private sk.cz.muni.brewery.positionOffer targetposition;
 
 	@org.kie.api.definition.type.Label(value = "Successfull")
-	private java.lang.Boolean scuccess;
+	private java.lang.Boolean success;
 
 	public cv() {
 	}
@@ -130,12 +130,12 @@ public class cv implements java.io.Serializable {
 		this.targetposition = targetposition;
 	}
 
-	public java.lang.Boolean getScuccess() {
-		return this.scuccess;
+	public java.lang.Boolean getSuccess() {
+		return this.success;
 	}
 
-	public void setScuccess(java.lang.Boolean scuccess) {
-		this.scuccess = scuccess;
+	public void setSuccess(java.lang.Boolean success) {
+		this.success = success;
 	}
 
 	public cv(java.lang.Long id,
@@ -144,7 +144,7 @@ public class cv implements java.io.Serializable {
 			java.lang.String tel, java.lang.String mail, java.lang.Integer age,
 			java.lang.String previousJob, java.lang.String reason,
 			sk.cz.muni.brewery.positionOffer targetposition,
-			java.lang.Boolean scuccess) {
+			java.lang.Boolean success) {
 		this.id = id;
 		this.conditions = conditions;
 		this.name = name;
@@ -155,7 +155,7 @@ public class cv implements java.io.Serializable {
 		this.previousJob = previousJob;
 		this.reason = reason;
 		this.targetposition = targetposition;
-		this.scuccess = scuccess;
+		this.success = success;
 	}
 
 }
