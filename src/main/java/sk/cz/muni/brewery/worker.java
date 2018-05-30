@@ -23,7 +23,7 @@ public class worker implements java.io.Serializable {
 
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	@org.kie.api.definition.type.Label(value = "Worker position")
-	private sk.cz.muni.brewery.positionoffer position;
+	private sk.cz.muni.brewery.positionOffer position;
 
 	@javax.persistence.ManyToOne(fetch = javax.persistence.FetchType.EAGER, cascade = {javax.persistence.CascadeType.ALL})
 	@org.kie.api.definition.type.Label(value = "Worker position type")
@@ -56,11 +56,11 @@ public class worker implements java.io.Serializable {
 		this.cv = cv;
 	}
 
-	public sk.cz.muni.brewery.positionoffer getPosition() {
+	public sk.cz.muni.brewery.positionOffer getPosition() {
 		return this.position;
 	}
 
-	public void setPosition(sk.cz.muni.brewery.positionoffer position) {
+	public void setPosition(sk.cz.muni.brewery.positionOffer position) {
 		this.position = position;
 	}
 
@@ -74,7 +74,7 @@ public class worker implements java.io.Serializable {
 
 	public worker(java.lang.Long id, java.lang.String workmail,
 			sk.cz.muni.brewery.cv cv,
-			sk.cz.muni.brewery.positionoffer position,
+			sk.cz.muni.brewery.positionOffer position,
 			sk.cz.muni.brewery.positionType positionType) {
 		this.id = id;
 		this.workmail = workmail;
