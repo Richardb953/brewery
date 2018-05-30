@@ -60,7 +60,7 @@ public class worker implements java.io.Serializable {
 		return this.position;
 	}
 
-	public void setPosition(sk.cz.muni.brewery.position_offer position) {
+	public void setPosition(sk.cz.muni.brewery.positionoffer position) {
 		this.position = position;
 	}
 
