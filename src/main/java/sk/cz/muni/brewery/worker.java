@@ -31,6 +31,16 @@ public class worker implements java.io.Serializable {
 
 	public worker() {
 	}
+	
+	public worker(java.lang.String workmail,
+			sk.cz.muni.brewery.cv cv,
+			sk.cz.muni.brewery.positionOffer position,
+			sk.cz.muni.brewery.positionType positionType) {
+		this.workmail = workmail;
+		this.cv = cv;
+		this.position = position;
+		this.positionType = positionType;
+	}
 
 	public java.lang.Long getId() {
 		return this.id;
